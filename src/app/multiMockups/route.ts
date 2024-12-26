@@ -201,7 +201,9 @@ export async function POST(request: Request) {
           files: chosenProduct.files,
         }),
       }
+
     );
+
 
     if (!createTaskRes.ok) {
       const text = await createTaskRes.text();
@@ -210,6 +212,7 @@ export async function POST(request: Request) {
         { status: createTaskRes.status }
       );
     }
+    console.log("createTaskRes:", createTaskRes);
 
     const createTaskData = await createTaskRes.json();
     const taskKey = createTaskData?.result?.task_key;
