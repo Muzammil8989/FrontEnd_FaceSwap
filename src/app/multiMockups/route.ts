@@ -227,7 +227,7 @@ export async function POST(request: Request) {
     // 2) Poll for completion
     let attempts = 0;
     const maxAttempts = 10;
-    const pollIntervalMs = 3000; // 3 seconds
+    const pollIntervalMs = 9000; // 3 seconds
 
     while (attempts < maxAttempts) {
       attempts++;
