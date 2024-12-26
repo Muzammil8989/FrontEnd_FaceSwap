@@ -163,7 +163,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     const products = [
       { product: structuredClone(product1), productId: 679 },
       { product: structuredClone(product2), productId: 599 },
-      { product: structuredClone(product3), productId: 638 },
+      // { product: structuredClone(product3), productId: 638 },
     ];
 
     // Shuffle the products array to randomize the selection
@@ -213,6 +213,8 @@ export async function POST(request: Request): Promise<NextResponse> {
         return createTaskData?.result?.task_key;
       })
     );
+
+    console.log("tasks:", tasks);
 
     if (tasks.includes(undefined)) {
       return NextResponse.json(
