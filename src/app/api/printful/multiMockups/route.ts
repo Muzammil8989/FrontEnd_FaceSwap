@@ -225,7 +225,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
     // 2) Poll for completion of all tasks
     const maxAttempts = 10;
-    const pollIntervalMs = 3000; // 3 seconds
+    const pollIntervalMs = 9000; // 3 seconds
     let attempts = 0;
 
     while (attempts < maxAttempts) {
