@@ -328,6 +328,8 @@ export default function Celebrities() {
         body: JSON.stringify({  imageUrl:resultImageUrl }),
       });
 
+      console.log(await response.json());
+
       // if (!res.ok) {
       //   const errData = await res.json();
       //   throw new Error(errData.error || "Error creating mockups");
