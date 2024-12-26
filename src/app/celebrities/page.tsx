@@ -328,7 +328,7 @@ export default function Celebrities() {
         body: JSON.stringify({  imageUrl:resultImageUrl }),
       });
 
-      console.log(await response.json());
+      console.log(await res.json());
 
       // if (!res.ok) {
       //   const errData = await res.json();
