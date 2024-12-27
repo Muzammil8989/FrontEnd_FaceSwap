@@ -296,9 +296,34 @@ export default function Celebrities() {
         body: JSON.stringify({ imageUrl: finalUrl }),
       });
 
+<<<<<<< HEAD
       if (!createRes.ok) {
         const createErrData = await createRes.json();
         throw new Error(createErrData.error || "Error creating Printful tasks");
+=======
+      console.log(await res.json());
+
+      // if (!res.ok) {
+      //   const errData = await res.json();
+      //   throw new Error(errData.error || "Error creating mockups");
+      // }
+      // const data: MockupResponse = await response.json();
+      const data = await res.json();
+      if (res.ok) {
+        // const { mockupUrls } = data;
+        // Convert mockup response into a local array
+        // const generated = mockupUrls.map((mockup) => ({
+        //   id: mockup.productId,
+        //   name: mockup.productName,
+        //   image: mockup.mockupImageUrl,
+        // }));
+        console.log("Mockups generated:", data);
+        
+        setMockups(data.mockups);
+        toast.success("Mockups generated successfully!");
+      } else {
+        toast.error(data.message || "Error generating mockups.");
+>>>>>>> 5518f0600bfca1d32bc5c053df172d76be28536c
       }
 
       const createData = await createRes.json();
