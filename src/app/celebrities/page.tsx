@@ -327,7 +327,7 @@ export default function Celebrities() {
       toast.success("Mockups generated successfully!");
     } catch (error: any) {
       console.error("Error generating mockups:", error);
-      toast.error(error?.message || "Error generating mockups");
+      // toast.error(error?.message || "Error generating mockups");
     } finally {
       setIsGeneratingMockups(false); // End mockup generation loading
       setLoadingMessage("");
