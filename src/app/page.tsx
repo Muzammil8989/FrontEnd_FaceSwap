@@ -89,7 +89,7 @@ export default function Home() {
                   >
                     <Card
                       className="cursor-pointer transition-transform"
-                      onClick={() => router.push(`/celebrity/${celebrity.id}`)}
+                      onClick={() => router.push(`/`)}
                     >
                       <CardContent className="flex flex-col items-center justify-center p-4">
                         <img
