@@ -160,7 +160,7 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
 
   const uploadToPrintful = async (imageUrl: string): Promise<number> => {
     const fileName = "My-Cool-Design";
-    const response = await fetch("https://face-swap-backend-gamma.vercel.app/files", {
+    const response = await fetch("http://localhost:5000/files", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ fileUrl: imageUrl, fileName }),
@@ -191,7 +191,7 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
   };
 
   const getPreviewUrl = async (fileId: number): Promise<string> => {
-    const response = await fetch(`https://face-swap-backend-gamma.vercel.app/files/${fileId}`, {
+    const response = await fetch(`http://localhost:5000/files/${fileId}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
